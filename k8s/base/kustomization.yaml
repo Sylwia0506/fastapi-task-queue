@@ -1,0 +1,8 @@
+resources:
+  - deployment-fastapi.yaml
+  - service-fastapi.yaml
+  - deployment-celery.yaml
+  - deployment-redis.yaml
+  - service-redis.yaml
+  - deployment-flower.yaml
+  - service-flower.yaml 

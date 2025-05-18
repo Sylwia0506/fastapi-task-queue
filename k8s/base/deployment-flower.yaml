@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flower
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flower
+  template:
+    metadata:
+      labels:
+        app: flower
+    spec:
+      containers:
+        - name: flower
+          image: mher/flower:2.0.1
+          args: ["flower", "--broker=redis://redis:6379/0", "--port=5555"]
+          ports:
+            - containerPort: 5555 
